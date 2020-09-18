@@ -1,0 +1,50 @@
+
+
+    <div class="container mt-5" >
+        
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th scope="col">SL.no</th>
+                <th scope="col">Name</th>
+                <th scope="col">Postion</th>
+                <th scope="col">Office</th>
+                <th scope="col">Age</th>
+                <th scope="col">Join Date</th>
+                <th scope="col">Salery</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody *ngIf="brews">
+            <tr  *ngFor="let brew of brews">
+
+                <th scope="row">{{ brew.id }}</th>
+                <td>{{ brew.name }}</td>
+                <td>{{ brew.position }}</td>
+                <td>{{ brew.office }}</td>
+                <td>{{ brew.age }}</td>
+                <td>{{ brew.startDate }}</td>
+                <td>${{ brew.salary }}</td>
+                <td>
+                    <button type="button" class="btn btn-danger"  (click)="deleteEmpl(brew.id)">Delete</button>
+                    <button type="button" class="btn btn-success" routerLink="/edit/{{brew.id}}">Edit</button>
+                </td>
+            </tr>  
+            </tbody>
+        </table>
+    </div>
+
+    <form [formGroup]="profileForm">
+        <div class="form-group">
+          <label for="email">name</label>
+          <input type="text" class="form-control" formControlName="name" value="">
+        </div>
+        <div class="form-group">
+            <label for="email">Position:</label>
+            <input type="text" class="form-control" formControlName="position" value="">
+        </div>
+          
+       
+        <button type="submit" (click)="updateName()" class="btn btn-default">Submit</button>
+    </form>
+

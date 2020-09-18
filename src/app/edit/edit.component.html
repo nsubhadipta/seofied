@@ -1,0 +1,38 @@
+
+    <p>Hey, <strong>{{empdetails.name}}</strong></p>
+    <!-- <p>{{empdetails.age}}</p> -->
+
+
+        <form [formGroup]="productForm">
+            <div class="form-group">
+              <label >name</label>
+              <input type="text" class="form-control" formControlName="name" [(ngModel)]="empdetails.name">
+            </div> 
+            <div class="form-group">
+                <label >Position:</label>
+                <input type="text" class="form-control" formControlName="position" [(ngModel)]="empdetails.position">
+            </div>
+            <div class="form-group">
+                <label >office:</label>
+                <input type="text" class="form-control" formControlName="office" [(ngModel)]="empdetails.office">
+            </div>
+            <div class="form-group">
+                <label >age:</label>
+                <input type="text" class="form-control" formControlName="age" [(ngModel)]="empdetails.age">
+            </div>
+            <div class="form-group">
+                <label >startDate:</label>
+                <input type="text" class="form-control" formControlName="startDate" [(ngModel)]="empdetails.startDate">
+            </div>
+            <div class="form-group">
+                <label >salary:</label>
+                <input type="text" class="form-control" formControlName="salary" [(ngModel)]="empdetails.salary">
+            </div>
+              
+           
+            <button type="submit" (click)="editEmp()" class="btn btn-default">Update</button>
+          </form>
+    
+    
+    
+    

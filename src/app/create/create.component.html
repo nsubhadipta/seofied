@@ -1,0 +1,31 @@
+        <form [formGroup]="profileForm">
+            <div class="form-group">
+              <label for="email">name</label>
+              <input type="text" class="form-control" formControlName="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Position:</label>
+                <input type="text" class="form-control" formControlName="position">
+            </div>
+            <div class="form-group">
+                <label for="email">office:</label>
+                <input type="text" class="form-control" formControlName="office">
+            </div>
+            <div class="form-group">
+                <label for="email">age:</label>
+                <input type="text" class="form-control" formControlName="age">
+            </div>
+            <div class="form-group">
+                <label for="email">startDate:</label>
+                <input type="text" class="form-control" formControlName="startDate">
+            </div>
+            <div class="form-group">
+                <label for="email">salary:</label>
+                <input type="text" class="form-control" formControlName="salary">
+            </div>
+              
+           
+            <button type="submit" (click)="addEmp()" class="btn btn-default">Submit</button>
+        </form>
+
+    
