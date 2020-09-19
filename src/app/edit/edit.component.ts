@@ -16,14 +16,7 @@ export class EditComponent implements OnInit {
   id:any;
   empdetails: any;
 
-  // editProfileForm = new FormGroup({
-  //   name: new FormControl(''),
-  //   position: new FormControl(''),
-  //   office: new FormControl(''),
-  //   age: new FormControl(''),
-  //   startDate: new FormControl(''),
-  //   salary: new FormControl(''),
-  // });
+  
   productForm: FormGroup;
   
 
